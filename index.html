@@ -1,3 +1,49 @@
-git add, 
-git commit -m "mensagem"
-git push
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        * {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            display: flex;
+        }
+        html,body{
+            border: 0.2rem purple;
+            height: 100%;
+            padding:0%;
+            margin:0%;
+
+        }
+        #cabecalho{
+            border: 0.2.rem solid red;
+        }
+        #rodape{
+            border: 0.2.rem solid blue;
+        }
+        .container {
+            flex:1;
+            border: 0.2.rem solid green;
+        }
+        .menu{
+            border:0.2rem solid yellow;
+        }
+        .principal{
+            border:0.2rem solid aqua;
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">Meu site</header>
+    <footer id = "rodape">&copy;meu site</footer>
+    <div class = "container" >
+        <nav class="menu">Menu</nav>
+        <main = class="principal"> Conteudo principal</main>
+    </div>
+</body>
+
+</html>
