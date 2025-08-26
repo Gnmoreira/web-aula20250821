@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt br">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,41 +10,80 @@
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        body{
-            display: flex;
-        }
-        html,body{
-            border: 0.2rem purple;
-            height: 100%;
-            padding:0%;
-            margin:0%;
 
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
-        #cabecalho{
-            border: 0.2.rem solid red;
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
-        #rodape{
-            border: 0.2.rem solid blue;
+
+        #cabecalho {
+            display: flex;
+            align-items: center;
+            height: 5rem;
+            background-color: #0f172a;
+            padding: 1rem;
         }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            width: 2rem;
+            height: 2rem;
+            padding: 0.7rem;
+            border-radius: 100%;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .titulo {
+            color:#cecdcd;
+            font-size: 2rem;
+        }
+
         .container {
-            flex:1;
-            border: 0.2.rem solid green;
+            display: flex;
+            flex: 1;
+            border: 0.2rem solid green
         }
-        .menu{
-            border:0.2rem solid yellow;
+
+        .menu {
+            border: .2rem solid yellow;
+            width: 15rem;
         }
-        .principal{
-            border:0.2rem solid aqua;
+
+        .principal {
+            flex: 1;
+            border: .2rem solid aqua;
+        }
+
+        #rodape {
+            border: 0.2rem solid blue;
+            height: 5rem;
         }
     </style>
 </head>
+
 <body>
-    <header id="cabecalho">Meu site</header>
-    <footer id = "rodape">&copy;meu site</footer>
-    <div class = "container" >
+    <header id="cabecalho">
+        <div class="logo">G</div>
+        <h1 class="titulo">Meu Site</h1>
+    </header>
+    <div class="container">
         <nav class="menu">Menu</nav>
-        <main = class="principal"> Conteudo principal</main>
+        <main class="principal">Conteúdo Principal</main>
     </div>
+    <footer id="rodape">&copy; Meu Site</footer>
 </body>
 
 </html>
