@@ -2,143 +2,94 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo</title>
-    <style>
-        * {
-            font-size: 16px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        html,
-        body {
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #cabecalho {
-            display: flex;
-            align-items: center;
-            height: 5rem;
-            background-color: #0f172a;
-            padding: 1rem;
-        }
-
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            width: 2rem;
-            height: 2rem;
-            padding: 0.7rem;
-            border-radius: 100%;
-            background-color: blue;
-            color: #eee;
-            font-weight: bold;
-            margin-right: 1rem;
-        }
-
-        .titulo {
-            color: #eee;
-            font-size: 2rem;
-        }
-
-        .container {
-            display: flex;
-            flex: 1;
-            border: 0.2rem solid green
-        }
-
-        .menu {
-            border: .2rem solid yellow;
-            width: 15rem;
-            padding: .5rem;
-        }
-
-        .opcao {
-            display: flex;
-            background-color: #ddd;
-            padding: .4rem;
-            border-radius: .5rem;
-        }
-
-        .opcao:hover {
-            background-color: #ccc;
-            color: black;
-            box-shadow: 0rem .2rem .3rem .03rem #e7e7e7;;
-        }
-
-        .opcao:hover .icone-final {
-           opacity: 1;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4a4949;
-        }
-
-
-        .icone-inicial {
-            /* border: .1rem solid red; */
-            width: 1.5rem;
-            margin-right: .3rem;
-        }
-
-        .rotulo {
-            flex: 1;
-        }
-
-        .icone-final {
-            /* border: .1rem solid red; */
-            width: 1.5rem;
-            margin-left: .3rem;
-            opacity: 0;
-            transition: opacity 0.3seg ease;
-        }
-
-        .principal {
-            flex: 1;
-            border: .2rem solid aqua;
-        }
-
-        #rodape {
-            border: 0.2rem solid blue;
-            height: 5rem;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="./estilo.css">
     <script src="https://kit.fontawesome.com/5fbbbb9d95.js" crossorigin="anonymous"></script>
+    <script src="./menu-hamburguer.js"></script>
+    <script src="./bd.js"></script>
+    <script src="./noticia.js"></script>
 </head>
 
 <body>
-    <header id="cabecalho">
-        <div class="logo">G</div>
+    <header>
+        <div id="logo">G</div>
         <h1 class="titulo">Meu Site</h1>
+        <div class="menu-hamburguer" onclick="alternarVisualizacaoDoMenuLateral();">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
-    <div class="container">
-        <nav class="menu">
-            <a href="login.html">
-                <div class="opcao">
-                    <div class="icone-inicial">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </div>
-                    <div class="rotulo">Sair</div>
-                    <div class="icone-final">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
+    <section>
+        <nav>
+            <ul class="menu-lateral">
+                <li onclick="lerNoticias();">
+                    <a href="#">
+                        <div class="opcao">
+                            <div class="icone-inicial">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </div>
+                            <div class="rotulo">
+                                Notícias
+                            </div>
+                            <div class="icone-final">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="opcao">
+                            <div class="icone-inicial">
+                                <i class="fa-solid fa-message"></i>
+                            </div>
+                            <div class="rotulo">
+                                Mensagem
+                            </div>
+                            <div class="icone-final">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="opcao">
+                            <div class="icone-inicial">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="rotulo">
+                                Perfil
+                            </div>
+                            <div class="icone-final">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <div class="opcao">
+                            <div class="icone-inicial">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </div>
+                            <div class="rotulo">
+                                Sair
+                            </div>
+                            <div class="icone-final">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
         </nav>
-        <main class="principal">Conteúdo Principal</main>
-    </div>
-    <footer id="rodape">&copy; Meu Site</footer>
+        <main id="container">
+        </main>
+    </section>
+    <footer>&copy; 2025 Meu Site</footer>
 </body>
 
 </html>
